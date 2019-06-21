@@ -1,0 +1,83 @@
+.right{
+    float: right;
+}
+.header{
+    height: 5rem;
+    background-color: #fafafa;
+}
+.header .header-logo{
+    line-height: 5rem;
+}
+.header .header-logo img{
+    height: 3rem;
+    width: 11rem;
+}
+.header .header-user{
+    float: right;
+}
+.header .header-user p{
+    text-align: right;
+    margin-bottom: 0;
+    margin-top: 1rem;
+}
+.header .header-user p{
+    float: right;
+}
+.header .header-user span{
+    float: right;
+}
+.header .header-user img{
+    float: right;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-top: 0.75rem;
+}
+
+/* 矿池 */
+
+.ore{
+    height: 25rem;
+    position: absolute;
+    top:5rem;
+    left: 0;
+}
+.ore h4{
+    color: #fafafa;
+    font-size: 1.7rem;
+    margin-bottom: 0.3rem;
+}
+.ore p{
+    color: #fafafa
+}
+.ore .ore-receive a{
+    margin-top: 1.5rem;
+    background-color: #fafafa;
+    display: block;
+    width: 5.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    float: right;
+}
+.ore .ore-receive a:hover{
+    text-decoration: none;
+    
+}
+.ore .prog{
+    margin-bottom: 0;
+}
+
+/* 公告 */
+.notice{
+    border-radius: 0.7rem;
+    height: 5rem;
+    background-color: #fafafa;
+    margin-top: 0.3rem;
+}
+.notice h4{
+    margin-bottom: 0.3rem
+}
+.notice h4 a:hover{
+    text-decoration: none;
+}
