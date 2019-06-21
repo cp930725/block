@@ -1,0 +1,130 @@
+---------------------------------------------------------------
+[ 2019-06-21T09:02:06+08:00 ] 127.0.0.1 GET /mobile
+[ info ] myshop1.com/mobile [运行时间：0.310000s][吞吐率：3.23req/s] [内存消耗：1,885.63kb] [文件加载：75]
+[ info ] [ LANG ] D:\phpstudy\PHPTutorial\WWW\thinkphp\tp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__utma=234852098.409503409.1561016638.1561016638.1561016638.1; __utmz=234852098.1561016638.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=caasl3g48f0j4llf21s31f2pdn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'myshop1.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy\PHPTutorial\WWW\thinkphp\tp\application\mobile\view\index\index.html [ array (
+  0 => 'platform',
+  1 => 'group',
+  2 => 'news',
+  3 => 'config',
+  4 => 'collect',
+  5 => 'props',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014000s ] mysql:host=127.0.0.1;dbname=m213.cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.026000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.022000s ]
+[ sql ] [ SQL ] SELECT `id`,`image`,`title`,`date` FROM `article` WHERE  `type` <> 8  AND `date` <= '2019-06-21 09:02:05' ORDER BY `top` DESC,`sort` DESC,`date` DESC LIMIT 5 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.event.pool' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pool` [ RunTime:0.021000s ]
+[ sql ] [ SQL ] SELECT SUM(`reward`) AS tp_sum FROM `pool` WHERE  `action` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `account` [ RunTime:0.019000s ]
+[ sql ] [ SQL ] SELECT `uid`,`type`,`status`,`username`,`authen`,`inviter` FROM `account` WHERE  `username` = '13323456789' LIMIT 1 [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `profile` [ RunTime:0.023000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname`,`avatar`,`wechat`,`qq`,`alipay`,`realname`,`idcard`,`certificate`,`authen_reason`,`bankname`,`bankcard`,`bankaddress`,`phone`,`province`,`city`,`county` FROM `profile` WHERE  `username` = '13323456789' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wallet` [ RunTime:0.022000s ]
+[ sql ] [ SQL ] SELECT `username`,`money`,`deposit`,`score`,`score_deposit`,`spend`,`profit`,`team_profit`,`bonus`,`trade`,`sell`,`buy`,`ts_in`,`ts_out` FROM `wallet` WHERE  `username` = '13323456789' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dashboard` [ RunTime:0.018000s ]
+[ sql ] [ SQL ] SELECT `username`,`power`,`team_power`,`team_count`,`authen`,`machine_count`,`machine_power`,`machine_expire`,`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`lv0`,`lv1`,`lv2`,`lv3`,`lv4`,`lv5`,`lv6`,`lv7`,`lv8` FROM `dashboard` WHERE  `username` = '13323456789' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `store` [ RunTime:0.019000s ]
+[ sql ] [ SQL ] SELECT * FROM `store` WHERE  `catalog` = 2 ORDER BY `sort` DESC [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-06-21T09:02:06+08:00 ] 127.0.0.1 POST /pool
+[ info ] myshop1.com/pool [运行时间：0.131000s][吞吐率：7.63req/s] [内存消耗：1,891.52kb] [文件加载：74]
+[ info ] [ LANG ] D:\phpstudy\PHPTutorial\WWW\thinkphp\tp\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'pool',
+  'route' => 'event/pool',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__utma=234852098.409503409.1561016638.1561016638.1561016638.1; __utmz=234852098.1561016638.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=caasl3g48f0j4llf21s31f2pdn',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://myshop1.com/mobile',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36',
+  'authentication' => 'undefined',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://myshop1.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '16',
+  'connection' => 'close',
+  'host' => 'myshop1.com',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'countdown',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=m213.cn;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `pool` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT SUM(`reward`) AS tp_sum FROM `pool` WHERE  `action` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `account` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `uid`,`type`,`status`,`username`,`authen`,`inviter` FROM `account` WHERE  `username` = '13323456789' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `profile` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname`,`avatar`,`wechat`,`qq`,`alipay`,`realname`,`idcard`,`certificate`,`authen_reason`,`bankname`,`bankcard`,`bankaddress`,`phone`,`province`,`city`,`county` FROM `profile` WHERE  `username` = '13323456789' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wallet` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `username`,`money`,`deposit`,`score`,`score_deposit`,`spend`,`profit`,`team_profit`,`bonus`,`trade`,`sell`,`buy`,`ts_in`,`ts_out` FROM `wallet` WHERE  `username` = '13323456789' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dashboard` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT `username`,`power`,`team_power`,`team_count`,`authen`,`machine_count`,`machine_power`,`machine_expire`,`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`lv0`,`lv1`,`lv2`,`lv3`,`lv4`,`lv5`,`lv6`,`lv7`,`lv8` FROM `dashboard` WHERE  `username` = '13323456789' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `create_at` FROM `pool` WHERE  `username` = '13323456789'  AND `action` <> 2 ORDER BY `create_at` DESC LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-06-21T09:02:25+08:00 ] 127.0.0.1 GET /static/css/bootstrap.min.css.map
+[ info ] myshop1.com/static/css/bootstrap.min.css.map [运行时间：0.034000s][吞吐率：29.41req/s] [内存消耗：602.57kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpstudy\PHPTutorial\WWW\thinkphp\tp\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-06-21T09:02:26+08:00 ] 127.0.0.1 GET /assets/js/vendors/bootstrap.bundle.min.js.map
+[ info ] myshop1.com/assets/js/vendors/bootstrap.bundle.min.js.map [运行时间：0.051000s][吞吐率：19.61req/s] [内存消耗：602.59kb] [文件加载：55]
+[ info ] [ LANG ] D:\phpstudy\PHPTutorial\WWW\thinkphp\tp\thinkphp\lang\zh-cn.php
+[ info ] [ LOG ] INIT File
